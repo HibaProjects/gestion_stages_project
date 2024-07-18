@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    background: #eef8ff;
+  }
+  body, html {
+
+    width: 100%;
+    height: 100%;
+}
+
+.item2 {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    background-color: #fff;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.item3 {
+    position: absolute;
+    top: 77%;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .item4 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top:150%;
+  }
+  @media (max-width: 900px) {
+    .sm-mt-custom {
+      margin-top: 250px; 
+    }
+  }
+  
+.item3 img {
+    width: 40%;
+    height: 500px;
+    color: rgb(49, 48, 48);
+}
+ @media screen and (max-width: 900px) {
+ .item3  img{
+    display: flex;
+  width: auto;
+  height: 100%;  }
+} 
+
+.banner-card {
+  position: relative;
+}
+.banner-card img {
+  height: 501px;
+  width: 100%;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  padding: 20px;
+}
+.banner-text h4 {
+  font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .banner-text p {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .custom-button {
+    border-width: 3px;
+    border-radius: 25px;
+  }
+ 
+.espace {
+    border-radius: 4%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 290px;
+    height: 160px;
+    background-color: rgb(149, 192, 242);
+}
+.espace h1 {
+    font-weight: bold;
+    font-size: x-large;
+}
+.espace p {
+    padding: 7px 0;
+}
+.espace .p2 {
+    font-size: 16px;
+}
+
+
+.biryani-extrabold {
+    font-family: "Biryani", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.divBigBody {
+height: 100%;
+}
+.welcome-stg {
+    background-color: rgb(49, 48, 48);
+    width: 450px;
+    height: 60px;
+
+    margin-left: 300px;
+}
+.welcome-table{
+margin-left:300px
+}
+.stgDiv{
+  margin-left: 300px;
+  
+
+}
+.bgDiv{
+height:130%;
+}
+.welcomeDivtable{
+  margin-left:300px;
+
+}
+.table-welcome tbody{
+  width:16000;
+  }
+  .table-welcome th{
+  width:300px
+  }
+  .table-welcome td{
+    width:350px
+  
+  }
+  .table-dashboard {
+    margin-left:0;
+    margin-top: 20px;
+  }
+.table-dashboard tbody{
+width:16000px;
+}
+.table-dashboard th{
+width:300px;
+height:60px
+}
+.table-dashboard td{
+  width:340px;
+  height:60px
+
+
+}
+.formDocs{
+  margin-left: 300px;
+  
+
+}
+aside {
+
+    margin-top: 55px;
+    padding-top: 10px;
+    height: 91%;
+}
+
+.table-dashboard tbody td,
+tbody th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px; 
+    padding-bottom: 7px;
+}
+.table-dashboard tbody th {
+    background-color: #11324D;
+    border-color: rgb(49, 48, 48);
+    color: white;
+    text-align: start;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+.upload-file {
+    display: inline-block;
+    padding: 0 12px;
+    height: 50px;
+    line-height: 36px;
+    color: #fff;
+    background-color: blue;
+    width: 500px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.upload-file input[type="file"] {
+    display: none;
+}
+.rapportH1 {
+    font-size: 25px;
+    color: rgb(56, 53, 53);
+}
+.btn-warning {
+    position: relative;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: blue;
+    border: 0;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.btn-warning input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: scale(3);
+    opacity: 0;
+}
+.btn-warning:hover {
+    background-color: rgb(9, 39, 211);
+}
+
+.tabs-container {
+    width: 100%; 
+    justify-content: center; /* centrer the tabs horizontallement */
+}
+  
+  .tab-label {
+    font-size: 1.05rem; 
+    margin: 0 1rem;
+
+  }
+
+.table-formateur{
+    width:100%;
+    background-color: blue;
+}
+.tableaux-admin{
+    width:95%;
+}
+
+.lexend-deca-propos {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal ;
+}
