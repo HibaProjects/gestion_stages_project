@@ -9,7 +9,7 @@ import SelectInput from "@/Components/SelectInput";
 import { __ } from "@/Libs/Lang";
 
 export default function Register() {
-    
+
     const options = ["formateur", "etudiant"];
     const { data, setData, post, processing, errors, reset } = useForm({
         name: "",

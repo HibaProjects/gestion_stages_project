@@ -13,14 +13,13 @@ export default function Authenticated({
 }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
-   
+
     return (
         <div className="min-h-screen bg-gray-100">
             <nav className="bg-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16 items-center">
                         <div className="flex items-center">
-                           
                             <img
                                 src="my logoo final.jpg"
                                 alt="image logo"
@@ -30,7 +29,6 @@ export default function Authenticated({
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ms-6 z-20">
-                           
                             <LangToggle />
                             <div className="flex items-center rounded-md mr-3">
                                 <Link
@@ -40,7 +38,6 @@ export default function Authenticated({
                                     {__('home')}
                                 </Link>
                             </div>
-                            
                             <Dropdown>
                                 <Dropdown.Trigger>
                                     <span className="inline-flex rounded-md">

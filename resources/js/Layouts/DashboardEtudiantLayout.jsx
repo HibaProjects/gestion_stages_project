@@ -8,7 +8,7 @@ import LangToggle from "@/Components/LangToggle";
 export default function Authenticated({ user,authenticated,role_id, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
-        
+
     return (
         <div className="h-full absolute bgDiv w-full bg-gray-200">
             <nav className="bg-white border-b border-gray-100">
@@ -32,7 +32,6 @@ export default function Authenticated({ user,authenticated,role_id, children }) 
                                 <Dropdown>
                                     <Dropdown.Trigger>
                                         <span className="inline-flex rounded-md">
-                                        
                                             <svg
                                                 fill="#000000"
                                                 width="20px"

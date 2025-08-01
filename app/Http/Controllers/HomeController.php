@@ -23,9 +23,9 @@ use Illuminate\Support\Facades\Storage;
 class HomeController extends Controller
 {
 
-   
+
     public function index(Request $r) {
-      
+
         $authenticated = $r->session()->get('authenticated', 0);
         $role_id = $r->session()->get('role_id', null);
         return Inertia::render('Welcome', [
@@ -36,14 +36,14 @@ class HomeController extends Controller
             'authenticated'=>$authenticated,
             "role_id"=>$role_id
            ]
-        
+
         );
     }
-    
+
     public function  indexStg(Request $request) {
 
         if ($request->user()){
-            
+
             $etds=Etudiant::where('user_id',$request->user()->id)->first();
 
             if(Stage::find($etds->stage_id) == null) {
@@ -74,13 +74,11 @@ class HomeController extends Controller
                 ];
 
                 $jsonData = json_encode($usersDataArray, JSON_PRETTY_PRINT);
-        
             $folderPath = 'json_data'; //MY Folder name
 
             $fileName = 'data.json';
             Storage::disk('local')->put($folderPath . '/' . $fileName, $jsonData);
             return Inertia::render('DashboardFormateur',['authenticated'=>$authenticated,"role_id"=>$role_id]);
-    
             }
             else{
             abort(403,'only connected user is allowed to access this route');
@@ -93,7 +91,6 @@ class HomeController extends Controller
                 $stage=Stage::all();
 
                 $etudiantsdata =  DB::select('CALL GetEtudiantsData()');
-            
                 $formateursdata = DB::select('CALL GetFormateursData()');
 
                 $usersDataArray=[
@@ -103,17 +100,16 @@ class HomeController extends Controller
                 ];
 
                 $jsonData = json_encode($usersDataArray, JSON_PRETTY_PRINT);
-        
-            $folderPath = 'json_data'; 
+
+            $folderPath = 'json_data';
 
             $fileName = 'dataadmin.json';
             Storage::disk('local')->put($folderPath . '/' . $fileName, $jsonData);
             return Inertia::render('DashboardAdmin',['authenticated'=>$authenticated,"role_id"=>$role_id]);
-    
             }
             else{
             abort(403,'only connected user is allowed to access this route');
             };
-        }             
-       
+        }
+
 }

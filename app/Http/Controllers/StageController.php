@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Exception;
 use App\Models\User;
 use Inertia\Inertia;
@@ -49,19 +48,17 @@ class StageController extends Controller
             foreach ($documents as $document) {
                        $document->stage_id=$stage->id;
                        $document->save();
-             }      
+             }
             return redirect()->route('dashboardEtudiant');
         }
         catch (Exception $e) {
             return redirect()->back()->with('error', 'Une erreur s\'est produite lors de l\'enregistrement du stage.');
         }
-        
         }
         public function edit($id){
             $stage=Stage::find($id);
                 return Inertia::render('StageFormEdit',[
                     'stage'=>$stage,
-                    
             ]);
         }
         public function update(Request $r ,$id){
@@ -93,7 +90,7 @@ class StageController extends Controller
             $documents=$etd->docs()->get();
             foreach ($documents as $document) {
                 $document->stage_id=NULL;
-      }  
+      }
             return response()->json(['message' => 'Stage deleted successfully'], 200);
 
         }
@@ -103,7 +100,7 @@ public function validateStage($id)
     $stage->update(['etat' => 'valide']);
     return response()->json([
         'message' => 'Stage validated successfully',
-        'newEtat' => $stage->etat 
+        'newEtat' => $stage->etat
     ]);
 }
 public function storeNote($id,Request $request)
@@ -126,7 +123,7 @@ public function storeNote($id,Request $request)
     catch (Exception $e) {
         return response()->json(['error' => $e->getMessage()], 500);
     }
-    
+
  }
  }
 

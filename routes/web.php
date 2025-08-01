@@ -26,19 +26,19 @@ Route::middleware('locale')->group(function() {
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 
- 
+
     Route::post('/validate-stage/{id}', [StageController::class,'validateStage'])->middleware(['auth', 'verified'])->name('validate.stage');;
     Route::post('/note-stage/{id}', [StageController::class, 'storeNote'])->name('store-note')->middleware(['auth', 'verified']);
-    
+
     Route::post('/language', [LanguageController::class, 'store'])->name('language.store')->middleware(['auth', 'verified']);
-    
+
     Route::get('/dashboardEtudiant',[HomeController::class,'indexStg'])->middleware(['auth', 'verified','etudiant'])->name('dashboardEtudiant');
     Route::get('/dashboardFormateur',[HomeController::class,'indexFormateur'])->middleware(['auth', 'verified','formateur'])->name('dashboardFormateur');
     Route::get('/dashboardAdmin',[HomeController::class,'indexAdmin'])->middleware(['auth', 'verified','admin'])->name('dashboardAdmin');
-    
-    
-    
-    
+
+
+
+
     Route::middleware('auth')->group(function () {
         Route::post('/upload-files', [FileController::class,'storeFile'])->name('file.store');
         Route::get('/dashboardEtudiant/form', [StageController::class,'create'])->name('stage.ajout');
